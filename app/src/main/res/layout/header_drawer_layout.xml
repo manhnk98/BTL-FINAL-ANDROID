@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:background="#FF0000">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/icon_a_khue"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_alignLeft="@id/profile_image"
+        android:layout_alignStart="@id/profile_image"
+        android:text="Nguyễn Khắc Mạnh"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:text="Đại học Công Nghiệp Hà Nội"
+        android:textColor="#FFF"
+        android:textSize="14sp"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_alignStart="@+id/user_name"
+        />
+
+</RelativeLayout>

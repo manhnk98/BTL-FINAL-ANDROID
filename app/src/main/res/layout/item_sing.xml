@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgSong"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="4dp"
+            android:src="@drawable/compact_disc" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/tv_title_of_sing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:text="tittle sing"
+                android:textColor="@color/black"
+                android:singleLine="true"
+                android:textSize="17dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_artist_of_sing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ten ca si" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | " />
+
+                <TextView
+                    android:id="@+id/tv_album_of_sing1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="album" />
+
+            </TableRow>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/im_sing_is_playing"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/item_playing"
+            android:visibility="invisible"
+            android:padding="24dp"
+            />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary" />
+
+</LinearLayout>

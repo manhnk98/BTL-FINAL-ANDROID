@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoFadeColor="@color/colorPrimary"
+    sothree:umanoPanelHeight="0dp">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                sothree:title="@string/toolbar_name"
+                android:id="@+id/main_toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                sothree:theme="@style/nkm"
+                android:layout_width="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/content_lv"
+                android:background="#999999"
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
+                <ListView
+                    android:id="@+id/lvParent"
+                    tools:listitem="@layout/item_sing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/btn_show_layout_play"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/image_sing"
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/music_disc_with_white_details" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_sing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:text="ten bai hat"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tv_artist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:text="Nghe si"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/item_background_circle"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/music_player_play"
+
+                    />
+
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/item_background_circle"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/play_next" />
+            </TableRow>
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+<!--    slide-->
+    <LinearLayout
+        sothree:theme="@style/Theme.AppCompat.NoActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/dragView"
+        android:background="@color/colorPrimaryDark"
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TableRow
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            >
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btn_hiden_layout_play"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/down_arrow_black"
+                android:background="@color/colorPrimaryDark"
+                android:tint="@color/colorPrimary"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/tv_sing_name_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NAME BAI HAT"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/tv_artist_name_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="casi"
+                        />
+                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" | "
+                        />
+                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/tv_album_name_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="album"
+                        />
+
+                </TableRow>
+            </LinearLayout>
+        </TableRow>
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/imgSong"
+            android:src="@drawable/icon_singer"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="1dp"/>
+
+        <!--    seekbar-->
+        <SeekBar
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/positionBar"
+            android:progress="0"
+            android:max="100"
+            android:indeterminate="false"/>
+
+        <TableRow
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/elapsedTimeLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="left|top"
+                android:text="0:00"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="6dp"
+                />
+            <TextView
+                android:id="@+id/remainingTimeLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="right|top"
+                android:text="0:00"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="6dp"
+                />
+        </TableRow>
+        <TableRow
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_tron"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/item_background_circle2"
+                android:src="@drawable/shuffle"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:layout_margin="4dp"
+                android:tint="@color/colorPrimary"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_press_play"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/play_pre"
+                android:background="@drawable/item_background_circle2"
+                android:scaleType="centerInside"
+                android:tint="@color/colorPrimary"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                />
+            <ImageButton
+                android:id="@+id/btn_play_and_pause"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@drawable/music_player_play"
+                android:scaleType="centerInside"
+                android:padding="16dp"
+                android:tint="@color/colorPrimary"
+                android:layout_margin="8dp"
+                android:background="@drawable/item_background_circle2"
+                />
+            <ImageButton
+                android:id="@+id/btn_next_play"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/play_next"
+                android:background="@drawable/item_background_circle2"
+                android:scaleType="centerInside"
+                android:padding="16dp"
+                android:tint="@color/colorPrimary"
+                android:layout_margin="8dp"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_lap_bai"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/item_background_circle2"
+                android:src="@drawable/repeat"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:layout_margin="4dp"
+                android:tint="@color/colorPrimary"
+                />
+
+        </TableRow>
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
