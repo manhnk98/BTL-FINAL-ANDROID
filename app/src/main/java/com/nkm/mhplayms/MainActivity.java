@@ -385,6 +385,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playMusic(listSing.get(baiSo));
     }
 
+    // ẩn slide
     private void hidenLayoutPlay() {
         if (mLayout.getPanelState() != SlidingUpPanelLayout.PanelState.COLLAPSED ||
                 mLayout.getPanelState() != SlidingUpPanelLayout.PanelState.HIDDEN) {
@@ -392,6 +393,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // hiện slide
     private void showLayoutPlay() {
         mLayout.setPanelState(SlidingUpPanelLayout.PanelState.EXPANDED);
     }

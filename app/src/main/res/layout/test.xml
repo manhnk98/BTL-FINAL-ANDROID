@@ -36,7 +36,7 @@
                 android:id="@+id/tv_sing_name_play"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="NAME BAI HAT"
+                android:text="Tên bài hát"
                 android:ellipsize="marquee"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16dp"
@@ -51,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimary"
-                    android:text="casi"
+                    android:text="Ca sĩ"
                     />
                 <TextView
                     android:textColor="@color/colorPrimary"
@@ -64,7 +64,7 @@
                     android:id="@+id/tv_album_name_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="album"
+                    android:text="Album"
                     />
 
             </TableRow>
@@ -124,47 +124,7 @@
             android:layout_marginLeft="6dp"
             />
     </TableRow>
-<!--    <TableRow-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:gravity="center">-->
 
-<!--        <ImageButton-->
-<!--            android:id="@+id/btn_lap_bai"-->
-<!--            android:layout_width="32dp"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:background="@drawable/item_background_circle2"-->
-<!--            android:src="@drawable/repeat"-->
-<!--            android:padding="10dp"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:layout_margin="4dp"-->
-<!--            android:tint="@color/colorPrimary"-->
-<!--            />-->
-<!--        <ImageButton-->
-<!--            android:id="@+id/btn_ko_lap"-->
-<!--            android:layout_width="32dp"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:background="@drawable/item_background_circle2"-->
-<!--            android:src="@drawable/repeat2"-->
-<!--            android:padding="10dp"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:layout_margin="4dp"-->
-<!--            android:tint="@color/colorPrimary"-->
-<!--            />-->
-<!--        <ImageButton-->
-<!--            android:id="@+id/btn_tron"-->
-<!--            android:layout_width="32dp"-->
-<!--            android:layout_height="32dp"-->
-<!--            android:background="@drawable/item_background_circle2"-->
-<!--            android:src="@drawable/shuffle"-->
-<!--            android:padding="10dp"-->
-<!--            android:scaleType="centerInside"-->
-<!--            android:layout_margin="4dp"-->
-<!--            android:tint="@color/colorPrimary"-->
-<!--            />-->
-<!--    </TableRow>-->
     <TableRow
         android:paddingBottom="20dp"
         android:layout_width="match_parent"
